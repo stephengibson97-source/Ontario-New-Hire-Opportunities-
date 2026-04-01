@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ontario New Hire Opportunities Initiative</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#5f6b7a;
+      --border:#d9e1ea;
+      --blue:#003366;
+      --blue2:#0f4c81;
+      --accent:#0072ce;
+      --green:#1f7a1f;
+      --warning:#fff7e6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .topbar{
+      background:var(--blue);
+      color:#fff;
+      padding:14px 0;
+      border-bottom:4px solid #c8102e;
+    }
+    .container{
+      width:min(980px, calc(100% - 32px));
+      margin:0 auto;
+    }
+    .topbar .row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      font-size:14px;
+    }
+    .govmark{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .ontario-logo{
+      width:42px;
+      height:42px;
+      flex:0 0 42px;
+      display:block;
+    }
+    .govmark-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .govmark-text .smallline{
+      font-size:11px;
+      opacity:.9;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .govmark-text .bigline{
+      font-size:18px;
+      font-weight:700;
+    }
+    .lang{
+      opacity:.9;
+    }
+    .hero{
+      background:linear-gradient(180deg, #eef4fa 0%, #f6f8fb 100%);
+      border-bottom:1px solid var(--border);
+      padding:36px 0 28px;
+    }
+    .eyebrow{
+      display:inline-block;
+      background:#e6eef8;
+      color:var(--blue2);
+      border:1px solid #c9d9eb;
+      padding:6px 10px;
+      border-radius:4px;
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      margin-bottom:14px;
+    }
+    h1{
+      font-size:42px;
+      line-height:1.15;
+      color:var(--blue);
+      margin:0 0 14px;
+    }
+    .subtitle{
+      max-width:820px;
+      font-size:20px;
+      color:#314255;
+      margin:0;
+    }
+    .main{
+      padding:28px 0 48px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:24px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding:24px;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);
+    }
+    h2{
+      color:var(--blue);
+      margin:0 0 12px;
+      font-size:28px;
+    }
+    h3{
+      color:var(--blue2);
+      margin:0 0 12px;
+      font-size:20px;
+    }
+    p{margin:0 0 16px}
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin:18px 0 24px;
+    }
+    .stat{
+      background:#f8fbff;
+      border:1px solid #d7e6f5;
+      border-radius:8px;
+      padding:16px;
+    }
+    .stat .label{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:6px;
+    }
+    .stat .value{
+      color:var(--blue);
+      font-size:28px;
+      font-weight:700;
+    }
+    ul,ol{
+      margin:0 0 16px 22px;
+      padding:0;
+    }
+    li{margin-bottom:8px}
+    .note{
+      background:var(--warning);
+      border:1px solid #f0d9a7;
+      border-radius:8px;
+      padding:16px;
+      margin-top:18px;
+    }
+    .button{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      padding:14px 20px;
+      border-radius:6px;
+      margin-top:8px;
+    }
+    .button:hover{
+      background:#005ea6;
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+    .side-list{
+      border-top:1px solid var(--border);
+      margin-top:14px;
+      padding-top:14px;
+    }
+    .side-list a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .side-list a:hover{
+      text-decoration:underline;
+    }
+    footer{
+      padding:28px 0 42px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--border);
+    }
+    @media (max-width: 820px){
+      h1{font-size:34px}
+      .subtitle{font-size:18px}
+      .grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .topbar .row{flex-direction:column; align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container row">
+      <div class="govmark">
+        <svg class="ontario-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="31" fill="#ffffff"></circle>
+          <circle cx="32" cy="32" r="28" fill="#0b0b0b"></circle>
+          <path d="M32 13
+                   C35 19, 41 20, 47 18
+                   C44 24, 45 30, 50 35
+                   C43 35, 38 39, 36 45
+                   C33 40, 27 38, 21 39
+                   C24 33, 23 27, 18 22
+                   C24 22, 29 19, 32 13Z"
+                fill="#ffffff"></path>
+          <circle cx="32" cy="30" r="5" fill="#0b0b0b"></circle>
+        </svg>
+        <div class="govmark-text">
+          <span class="smallline">Government of Ontario</span>
+          <span class="bigline">Ministry of Economic Advancement</span>
+        </div>
+      </div>
+      <div class="lang">Français</div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Program update</div>
+      <h1>New Hire Opportunities Initiative</h1>
+      <p class="subtitle">
+        Supporting early-career professionals through non-repayable funding for firm-wide strategic participation initiatives across eligible Ontario Investment Banking Union member firms.
+      </p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p>
+          As part of Ontario’s ongoing support for workforce development and strategic participation, the recently announced
+          <strong>New Hire Opportunities Initiative</strong>, under the <strong>Growing Ontario Fund</strong>,
+          provides <strong>non-repayable funding of up to $15,000</strong> for contracted employees of participating
+          Ontario Investment Banking Union firms who have been with an organization for less than three years.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="label">Maximum funding</div>
+            <div class="value">$15,000</div>
+          </div>
+          <div class="stat">
+            <div class="label">Eligible employees</div>
+            <div class="value">Junior professionals</div>
+          </div>
+          <div class="stat">
+            <div class="label">Tenure requirement</div>
+            <div class="value">&lt; 3 years</div>
+          </div>
+        </div>
+
+        <h3>Program intent</h3>
+        <p>
+          The initiative is designed to provide newer employees with direct exposure to, and participation in, firm-wide opportunities
+          that require capital contributions. This approach is intended to support meaningful integration into strategic initiatives
+          during the early years of employment.
+        </p>
+
+        <h3>Who should consider applying</h3>
+        <ul>
+          <li>Contracted employees of eligible OIBU firms</li>
+          <li>Junior professionals within their first three years of service</li>
+          <li>Team members participating in approved strategic initiatives</li>
+          <li>Individuals contributing to capital-supported firm-wide participation opportunities</li>
+        </ul>
+
+        <div class="note">
+          <strong>Applicant note:</strong> Employees beyond the 3-year threshold may no longer qualify under current program criteria.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3>Application checklist</h3>
+        <ol>
+          <li>Confirm that your tenure is below 3 years</li>
+          <li>Identify the relevant capital-supported initiative</li>
+          <li>Prepare a concise justification memorandum</li>
+          <li>Obtain internal organizational approval</li>
+          <li>Complete the required supporting documentation</li>
+        </ol>
+
+        <div class="side-list">
+          <h3>Program resources</h3>
+          <p><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noreferrer">Official program documentation and submission portal</a></p>
+          <p class="small">External link. Opens in a new tab.</p>
+          <p class="small" style="margin-top:10px;"><strong>Direct URL:</strong><br>https://www.youtube.com/watch?v=xvFZjo5PgG0</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © King's Printer for Ontario, 2026
+    </div>
+  </footer>
+</body>
+</html>
